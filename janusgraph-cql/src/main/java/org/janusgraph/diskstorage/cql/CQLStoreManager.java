@@ -623,10 +623,6 @@ public class CQLStoreManager extends DistributedStoreManager implements KeyColum
                 configLoaderBuilder.withDuration(DefaultDriverOption.METRICS_NODE_CQL_MESSAGES_INTERVAL,
                     Duration.ofMillis(configuration.get(METRICS_NODE_MESSAGES_REFRESH_INTERVAL)));
             }
-            if(configuration.has(METRICS_NODE_EXPIRE_AFTER)){
-                configLoaderBuilder.withDuration(DefaultDriverOption.METRICS_NODE_EXPIRE_AFTER,
-                    Duration.ofMillis(configuration.get(METRICS_NODE_EXPIRE_AFTER)));
-            }
         }
     }
 
